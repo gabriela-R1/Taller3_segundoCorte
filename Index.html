@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem de gestion academica</title>
+</head>
+
+<link rel="stylesheet" href="../Taller_3/css/menu.css">
+
+<body>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+   <header>
+    <div class="logo">
+        <img src="logocecar.png" alt="Logo Académico" height="100" width="150">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="HTML/pagina1.html" onclick="showSection('estudiantes')">Gestión de estudiantes</a></li>
+            <li><a href="HTML/pagina2.html" onclick="showSection('programas')">Gestión de programas académicos</a></li>
+            <li><a href="HTML/pagina3.html" onclick="showSection('matriculas')">Gestión de matrículas</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="estudiantes" class="section">
+        <h2>Gestión de Estudiantes</h2>
+        <p>Aquí podrás gestionar la información de los estudiantes.</p>
+    </section>
+
+    <section id="programas" class="section">
+        <h2>Gestión de Programas Académicos</h2>
+        <p>Aquí podrás gestionar los programas académicos disponibles.</p>
+    </section>
+
+    <section id="matriculas" class="section">
+        <h2>Gestión de Matrículas</h2>
+        <p>Aquí podrás registrar y gestionar las matrículas de los estudiantes.</p>
+    </section>
+</main>
+</body>
+</html>

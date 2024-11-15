@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de programas academicos</title>
+</head>
+
+<link rel="stylesheet" href="../css/pagina2.css">
+
+<body>
+    <div class="container">
+        <h1>Registro de Programas Académicos</h1>
+        <form id="formularioPrograma">
+            <label for="codigoPrograma">Código del Programa:</label>
+            <input type="text" id="codigoPrograma" required>
+
+            <label for="nombrePrograma">Nombre del Programa:</label>
+            <input type="text" id="nombrePrograma" required>
+
+            <label for="duracion">Duración (en semestres):</label>
+            <input type="number" id="duracion" required min="1>
+
+            <label for="modalidad">Modalidad:</label>
+            <select id="modalidad" required>
+                <option value="">Seleccione una modalidad</option>
+                <option value="presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+                <option value="semipresencial">Semipresencial</option>
+            </select>
+
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="fechaInicio" max="<?php echo date('Y-m-d'); ?>">
+
+            <button type="button" onclick="guardarPrograma()">Guardar Registro</button>
+            <button type="button" onclick="editarPrograma()">Editar Registro</button>
+            <button type="button" onclick="eliminarPrograma()">Eliminar Registro</button>
+        </form>
+
+        <h2>Lista de Programas Académicos</h2>
+        <ul id="listaProgramas"></ul>
+    </div>
+
+    <script src="../Js/pagina2.js"></script>
+
+</body>
+</html>

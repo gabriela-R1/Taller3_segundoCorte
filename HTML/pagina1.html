@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de estudintes</title>
+</head>
+
+<link rel="stylesheet" href="../css/pagina1.css">
+
+<body>
+    <div class="container">
+        <h1>Registro de Estudiantes</h1>
+        <form id="formularioEstudiante">
+            <label for="idEstudiante">Identificación del Estudiante:</label>
+            <input type="text" id="idEstudiante" required>
+
+            <label for="nombreCompleto">Nombre Completo:</label>
+            <input type="text" id="nombreCompleto" required pattern="[A-Za-z\s]+">
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required max="<?php echo date('Y-m-d'); ?>">
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" pattern="\d{8,15}">
+
+            <button type="button" onclick="guardarEstudiante()">Guardar Registro</button>
+            <button type="button" onclick="editarEstudiante()">Editar Registro</button>
+            <button type="button" onclick="eliminarEstudiante()">Eliminar Registro</button>
+        </form>
+
+        <h2>Lista de Estudiantes</h2>
+        <ul id="listaEstudiantes"></ul>
+    </div>
+    
+    <script src="../Js/pagina1.js"></script>
+
+</body>
+</html>

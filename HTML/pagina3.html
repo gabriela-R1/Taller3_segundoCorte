@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de matriculas</title>
+</head>
+
+<link rel="stylesheet" href="../css/pagina3.css">
+
+<body>
+    <div class="container">
+        <h1>Registro de matrículas</h1>
+        <form id="matriculaForm">
+            <label for="idMatricula">Identificación de matrícula:</label>
+            <input type="text" id="idMatricula" required>
+
+            <label for="idEstudiante">Identificación del estudiante:</label>
+            <input type="text" id="idEstudiante" required>
+
+            <label for="codigoPrograma">Código del programa:</label>
+            <input type="text" id="codigoPrograma" required>
+
+            <label for="fechaMatricula">Fecha de matrícula:</label>
+            <input type="date" id="fechaMatricula" required>
+
+            <label for="estadoMatricula">Estado de la matrícula:</label>
+            <select id="estadoMatricula" required>
+                <option value="">Seleccione un estado</option>
+                <option value="activa">Activa</option>
+                <option value="en proceso">En Proceso</option>
+                <option value="finalizada">Finalizada</option>
+                <option value="cancelada">Cancelada</option>
+            </select>
+
+            <button type="submit">Registrar matrícula</button>
+            <button type="button" id="editar">Editar matrícula</button>
+            <button type="button" id="eliminar">Eliminar matrícula</button>
+        </form>
+        <div id="mensaje"></div>
+        <h2>Matrículas Registradas</h2>
+        <ul id="matriculaList"></ul>
+    </div>
+
+    <script src="../Js/pagina3.js"></script>
+
+</body>
+</html>
